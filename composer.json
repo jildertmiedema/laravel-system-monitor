@@ -1,0 +1,24 @@
+{
+    "name": "jildertmiedema/laravel-system-monitor",
+    "description": "Laravel system monitor, export application info to statsd",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "JildertMiedema\\SystemMonitor\\": "src/SystemMonitor/"
+        }
+    },
+    "require": {
+        "illuminate/support": "5.2.*|5.3.*",
+        "illuminate/config": "5.2.*|5.3.*",
+        "illuminate/console": "5.2.*|5.3.*",
+        "illuminate/database": "5.2.*|5.3.*",
+        "illuminate/redis": "5.2.*|5.3.*",
+        "illuminate/container": "5.2.*|5.3.*",
+        "league/statsd": "^1.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "license": "MIT",
+    "minimum-stability": "stable"
+}
