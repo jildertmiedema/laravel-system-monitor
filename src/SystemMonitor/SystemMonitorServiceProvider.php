@@ -21,7 +21,7 @@ final class SystemMonitorServiceProvider extends ServiceProvider
         });
 
         $this->app->bind('measurement.store', function () {
-            return app(StatsdStore::class);
+            return $this->app[StatsdStore::class];
         });
 
         $this->app->resolving('measurement', function (Manager $manager) {
@@ -36,5 +36,20 @@ final class SystemMonitorServiceProvider extends ServiceProvider
         });
 
         $this->commands('command.measurement.run');
+    }
+
+    /**
+     * Perform post-registration booting of services.
+     */
+    public function boot()
+    {
+        $this->publishes([
+            $this->getConfigPath() => config_path('measurement.php'),
+        ], 'config');
+    }
+
+    private function getConfigPath()
+    {
+        return __DIR__.'/../../config/doctrine.php';
     }
 }
