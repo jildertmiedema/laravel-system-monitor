@@ -10,7 +10,7 @@ before_script:
 
 sudo: false
 
-script: phpunit --coverage-clover=coverage.clover
+script: phpunit
 
 matrix:
   fast_finish: true
