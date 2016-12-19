@@ -10,7 +10,7 @@ before_script:
 
 sudo: false
 
-script: phpunit
+script: vendor/bin/phpunit
 
 matrix:
   fast_finish: true
