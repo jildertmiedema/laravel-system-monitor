@@ -50,6 +50,6 @@ final class SystemMonitorServiceProvider extends ServiceProvider
 
     private function getConfigPath()
     {
-        return __DIR__.'/../../config/doctrine.php';
+        return __DIR__.'/../../config/measurement.php';
     }
 }
