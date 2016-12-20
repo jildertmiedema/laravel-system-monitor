@@ -62,6 +62,9 @@ class ManagerTest extends \PHPUnit_Framework_TestCase
         $this->assertSame(1, $this->store->gauges()['test-key']);
     }
 
+    /**
+     * @expectedException \JildertMiedema\SystemMonitor\MeasurementConfigurationError
+     */
     public function testRunWithMissingKey()
     {
         $this->config->set('measurement.measurements', [
@@ -77,6 +80,9 @@ class ManagerTest extends \PHPUnit_Framework_TestCase
         $manager->run();
     }
 
+    /**
+     * @expectedException \JildertMiedema\SystemMonitor\MeasurementConfigurationError
+     */
     public function testRunWithMissingType()
     {
         $this->config->set('measurement.measurements', [

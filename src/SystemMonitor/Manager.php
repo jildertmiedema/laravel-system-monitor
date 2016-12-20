@@ -39,7 +39,8 @@ final class Manager
             $key = array_get($measurement, 'key');
 
             if (!$type || !$key) {
-                throw new MeasurementConfigurationError('The measurement configuration needs at least a type and a key');
+                $message = 'The measurement configuration needs at least a type and a key';
+                throw new MeasurementConfigurationError($message);
             }
 
             $runner = $this->types[$type];
