@@ -1,5 +1,12 @@
 # laravel-system-monitor
 
+[![Author](http://img.shields.io/badge/author-@jildertmiedema-blue.svg?style=flat-square)](https://twitter.com/jildertmiedema)
+[![Build Status](https://img.shields.io/travis/jildertmiedema/laravel-system-monitor/master.svg?style=flat-square)](https://travis-ci.org/jildertmiedema/laravel-system-monitor)
+[![Quality Score](https://img.shields.io/scrutinizer/g/jildertmiedema/laravel-system-monitor.svg?style=flat-square)](https://scrutinizer-ci.com/g/jildertmiedema/laravel-system-monitor)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Packagist Version](https://img.shields.io/packagist/v/jildertmiedema/laravel-system-monitor.svg?style=flat-square)](https://packagist.org/packages/jildertmiedema/laravel-system-monitor)
+[![Total Downloads](https://img.shields.io/packagist/dt/jildertmiedema/laravel-system-monitor.svg?style=flat-square)](https://packagist.org/packages/jildertmiedema/laravel-system-monitor)
+
 This package will be monitor application metrices. 
 It is dynamic configurable, but with the default settings you will be able to show some basic stuff.
 
