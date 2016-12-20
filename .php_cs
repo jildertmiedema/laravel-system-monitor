@@ -16,6 +16,7 @@ return PhpCsFixer\Config::create()
         'php_unit_strict' => true,
         'phpdoc_add_missing_param_annotation' => true,
         'psr4' => true,
+        'declare_strict_types' => true,
         'strict_comparison' => true,
         'strict_param' => true,
     ))

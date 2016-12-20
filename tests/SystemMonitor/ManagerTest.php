@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace JildertMiedema\SystemMonitor;
 
 use Illuminate\Config\Repository;

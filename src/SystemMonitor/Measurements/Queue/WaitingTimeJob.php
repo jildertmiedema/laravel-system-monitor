@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace JildertMiedema\SystemMonitor\Measurements\Queue;
 
 use Illuminate\Contracts\Container\Container;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
-final class WaitingTimeJob
+final class WaitingTimeJob implements ShouldQueue
 {
     /**
      * @var float
