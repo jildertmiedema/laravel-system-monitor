@@ -44,6 +44,36 @@ To publish the config use:
 ```php
 php artisan vendor:publish --tag="config"
 ```
+Change the `config/measurement.php` file to your needs.
+
+Measurements can be configured by choosing a `type` and `key`.
+The `type` is the type of the type of the measurement.
+The `key` is the statsd key.
+Per type some additional settings are required. 
+
+ * `mysql.speed` The reaction time of a mysql connection. (Configure a `connection`)
+ * `redis.speed` The reaction time of a redis connection. (Configure a `connection`)
+ * `queue.size` Measures to amount of items in the queue. (Configure a `queue`)
+ * `queue.waiting-time` Put a job on the queue and measures how long it takes before its handled by the queue. (Configure a `queue`)
+
+## Testing
+Run this command to show the result as console output.
+`php artisan measurement:run  --debug`
 
 ## Statsd server
-Some docker stuff is create to receive (and show) data. [Show me](https://github.com/jildertmiedema/statsd-logging)
+This package is design to be send to a statsd server. 
+Of course you can implement your own `MeasurementStore` to send it elsewhere.
+Some docker stuff is created to receive (and show) data. [Show me](https://github.com/jildertmiedema/statsd-logging)
+
+## Extending
+This package comes with a default setup, but you can easly extend or replace parts.
+
+To create your own measurement, create a new class that implements the `JildertMiedema\SystemMonitor\Measurements\Measurement` interface.
+To register your class insert this in a service provider:
+```php
+use JildertMiedema\SystemMonitor\Measurements\Manager;
+
+$this->app->resolving('measurement', function (Manager $manager) {
+    $manager->extend($this->app[YourMeasurementClass::class]);
+});
+```

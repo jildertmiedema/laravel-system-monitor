@@ -36,6 +36,6 @@ final class WaitingTimeJob implements ShouldQueue
         $timerEnd = microtime(true);
         $time = round(($timerEnd - $this->startTime) * 1000, 4);
 
-        $store->storeTimer($this->key, $time);
+        $store->storeTimer($this->key, $time.'|ms');
     }
 }

@@ -47,6 +47,6 @@ final class MysqlConnectionSpeed implements Measurement
         $timerEnd = microtime(true);
         $time = round(($timerEnd - $timerStart) * 1000, 4);
 
-        $store->storeTimer($key, $time);
+        $store->storeTimer($key, $time . '|ms');
     }
 }

@@ -3,8 +3,7 @@
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
     ->setRules(array(
-        '@Symfony' => true,
-        '@Symfony:risky' => true,
+        '@PSR2' => true,
         'array_syntax' => array('syntax' => 'short'),
         'combine_consecutive_unsets' => true,
         // one should use PHPUnit methods to set up expected exception instead of annotations
@@ -12,6 +11,7 @@ return PhpCsFixer\Config::create()
         'no_useless_else' => true,
         'no_useless_return' => true,
         'ordered_class_elements' => true,
+        'return_type_declaration' => true,
         'ordered_imports' => true,
         'php_unit_strict' => true,
         'phpdoc_add_missing_param_annotation' => true,

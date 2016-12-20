@@ -47,6 +47,6 @@ final class RedisConnectionSpeed implements Measurement
         $timer_end = microtime(true);
         $time = round(($timer_end - $timer_start) * 1000, 4);
 
-        $store->storeTimer($key, $time);
+        $store->storeTimer($key, $time . '|ms');
     }
 }
