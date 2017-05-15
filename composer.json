@@ -8,13 +8,13 @@
         }
     },
     "require": {
-        "php" : "~7.0",
-        "illuminate/support": "5.2.*|5.3.*|5.4.*",
+        "php": "~7.0",
         "illuminate/config": "5.2.*|5.3.*|5.4.*",
         "illuminate/console": "5.2.*|5.3.*|5.4.*",
+        "illuminate/container": "5.2.*|5.3.*|5.4.*",
         "illuminate/database": "5.2.*|5.3.*|5.4.*",
         "illuminate/redis": "5.2.*|5.3.*|5.4.*",
-        "illuminate/container": "5.2.*|5.3.*|5.4.*",
+        "illuminate/support": "5.2.*|5.3.*|5.4.*",
         "league/statsd": "^1.4"
     },
     "require-dev": {
