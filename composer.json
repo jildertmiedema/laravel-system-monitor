@@ -9,16 +9,16 @@
     },
     "require": {
         "php" : "~7.0",
-        "illuminate/support": "5.2.*|5.3.*",
-        "illuminate/config": "5.2.*|5.3.*",
-        "illuminate/console": "5.2.*|5.3.*",
-        "illuminate/database": "5.2.*|5.3.*",
-        "illuminate/redis": "5.2.*|5.3.*",
-        "illuminate/container": "5.2.*|5.3.*",
-        "squizlabs/php_codesniffer": "^2.3",
+        "illuminate/support": "5.2.*|5.3.*|5.4.*",
+        "illuminate/config": "5.2.*|5.3.*|5.4.*",
+        "illuminate/console": "5.2.*|5.3.*|5.4.*",
+        "illuminate/database": "5.2.*|5.3.*|5.4.*",
+        "illuminate/redis": "5.2.*|5.3.*|5.4.*",
+        "illuminate/container": "5.2.*|5.3.*|5.4.*",
         "league/statsd": "^1.4"
     },
     "require-dev": {
+        "squizlabs/php_codesniffer": "^2.3",
         "phpunit/phpunit": "^5.7"
     },
     "scripts": {
