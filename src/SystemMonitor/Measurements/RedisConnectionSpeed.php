@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace JildertMiedema\SystemMonitor\Measurements;
 
-use Illuminate\Redis\Database;
+use Illuminate\Redis\RedisManager;
 use JildertMiedema\SystemMonitor\System\MeasurementStore;
 
 final class RedisConnectionSpeed implements Measurement
 {
     /**
-     * @var Database
+     * @var RedisManager
      */
     private $redis;
 
-    public function __construct(Database $redis)
+    public function __construct(RedisManager $redis)
     {
         $this->redis = $redis;
     }
@@ -40,7 +40,7 @@ final class RedisConnectionSpeed implements Measurement
         $connection = array_get($data, 'connection');
         $key = array_get($data, 'key');
 
-        $database = $this->redis->connection($connection);
+        $database = $this->redis->connection($connection)->client();
 
         $timer_start = microtime(true);
         $database->ping('PING');
